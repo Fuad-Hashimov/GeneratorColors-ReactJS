@@ -1,11 +1,6 @@
 import React, { Component } from "react";
 import ColorsUI from "./ColorsUI";
-
 class ColorGenerator extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   genaratorColor = () => {
     const str = "0123456789ABCDEF";
     let color = "#";
@@ -15,19 +10,14 @@ class ColorGenerator extends Component {
     }
     return color;
   };
+
   colorsArr = () => {
     const arr = [];
     for (let i = 0; i < this.genaratorColor().length; i++) {
       arr.push(this.genaratorColor());
     }
-
     return arr;
   };
-
-  handleClick = () => {
-    this.colorsArr();
-  };
-
   render() {
     return (
       <div className="container">
